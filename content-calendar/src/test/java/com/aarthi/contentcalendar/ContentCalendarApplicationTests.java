@@ -1,4 +1,4 @@
-package com.aarthi.spring.contentcalendar;
+package com.aarthi.contentcalendar;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
