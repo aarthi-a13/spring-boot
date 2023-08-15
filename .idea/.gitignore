@@ -1,10 +1,8 @@
 # Default ignored files
 /shelf/
-/workspace.xml
-/compiler.xml
-/encodings.xml
-/jarRepositories.xml
-/modules.xml
-/misc.xml
-/spring-boot.iml
-/vcs.xml
+*.iml
+*.xml
+*.json
+*.html
+*.cookies
+*.http
