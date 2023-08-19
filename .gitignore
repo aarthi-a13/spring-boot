@@ -37,3 +37,6 @@ build/
 /Microservices/product-service/mvnw
 /Microservices/order-service/mvnw.cmd
 /Microservices/product-service/mvnw.cmd
+/content-calendar/.mvn/
+/content-calendar/mvnw
+/content-calendar/mvnw.cmd
