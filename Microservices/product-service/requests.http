@@ -1,0 +1,9 @@
+###
+POST http://localhost:8080/Product/api/product
+Content-Type: application/json
+
+{
+  "name": "Iphone 13",
+  "description": "Iphone 13",
+  "price": 1200
+}
