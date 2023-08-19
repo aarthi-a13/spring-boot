@@ -1,0 +1,17 @@
+POST http://localhost:8081/Order/api/order
+Content-Type: application/json
+
+{
+  "orderLineItems": [
+    {
+      "skuCode": "iphone_13",
+      "price": 1200,
+      "quantity": 1
+    },
+    {
+      "skuCode": "hp_notebook",
+      "price": 800,
+      "quantity": 1
+    }
+  ]
+}
