@@ -8,3 +8,4 @@ services:
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: password
+      POSTGRESS_DB: content

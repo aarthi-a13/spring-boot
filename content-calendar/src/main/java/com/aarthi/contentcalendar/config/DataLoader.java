@@ -23,9 +23,10 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        try (InputStream stream = TypeReference.class.getResourceAsStream("/data/content.json")) {
-            repository.saveAll(mapper.readValue(stream, new TypeReference<List<Content>>() {
-            }));
-        }
+        if (repository.count() == 0)
+            try (InputStream stream = TypeReference.class.getResourceAsStream("/data/content.json")) {
+                repository.saveAll(mapper.readValue(stream, new TypeReference<List<Content>>() {
+                }));
+            }
     }
 }
