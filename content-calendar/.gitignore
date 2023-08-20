@@ -31,12 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/Microservices/order-service/.mvn/wrapper/maven-wrapper.properties
-/Microservices/product-service/.mvn/wrapper/maven-wrapper.properties
-/Microservices/order-service/mvnw
-/Microservices/product-service/mvnw
-/Microservices/order-service/mvnw.cmd
-/Microservices/product-service/mvnw.cmd
-/content-calendar/.mvn/
-/content-calendar/mvnw
-/content-calendar/mvnw.cmd
