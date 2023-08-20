@@ -21,7 +21,7 @@ import java.util.UUID;
 public class OrderService {
     private final ModelMapper mapper;
     private final OrderRepository repository;
-    private final WebClient webClient;
+    private final WebClient.Builder webClientBuilder;
 
     public void placeOrder(OrderRequest request) {
 
@@ -33,11 +33,12 @@ public class OrderService {
         List<String> skuCodes = order.getOrderLineItems().stream().map(OrderLineItems::getSkuCode).toList();
 
         //Call inventory service to check the stock
-        InventoryResponse[] inventoryResponses = webClient.get().uri("http://localhost:8082/Inventory/api/inventory",
+        InventoryResponse[] inventoryResponses = webClientBuilder.build().get()
+                .uri("http://inventory-service/Inventory/api/inventory",
                         uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
                 .retrieve().bodyToMono(InventoryResponse[].class).block();
         boolean productsInStock = Arrays.stream(inventoryResponses).allMatch(InventoryResponse::isInStock);
-        if(productsInStock)
+        if (productsInStock)
             repository.save(order);
         else throw new IllegalArgumentException("Product is not in stock, please try again later");
 

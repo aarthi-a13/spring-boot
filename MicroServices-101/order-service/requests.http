@@ -23,8 +23,8 @@ Content-Type: application/json
 {
   "orderLineItems": [
     {
-      "skuCode": "chromebook",
-      "price": 950,
+      "skuCode": "hp_notebook",
+      "price": 800,
       "quantity": 1
     }
   ]

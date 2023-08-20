@@ -28,7 +28,7 @@ class ProductServiceApplicationTests {
 
     @MockBean
     private ProductService service;
- 
+
 
     //This is to test the integration with TestContainers framework and needs docker env
    /* @Container
