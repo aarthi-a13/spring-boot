@@ -9,8 +9,22 @@ Content-Type: application/json
       "quantity": 1
     },
     {
-      "skuCode": "hp_notebook",
+      "skuCode": "apple_glass",
       "price": 800,
+      "quantity": 1
+    }
+  ]
+}
+
+###
+POST http://localhost:8081/Order/api/order
+Content-Type: application/json
+
+{
+  "orderLineItems": [
+    {
+      "skuCode": "chromebook",
+      "price": 950,
       "quantity": 1
     }
   ]
