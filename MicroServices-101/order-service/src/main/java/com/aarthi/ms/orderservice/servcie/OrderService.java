@@ -7,11 +7,13 @@ import com.aarthi.ms.orderservice.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
     private final ModelMapper mapper;
     private final OrderRepository repository;
@@ -19,10 +21,9 @@ public class OrderService {
     public void placeOrder(OrderRequest request) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
-        order.setOrderLineItemsList(request.getOrderLineItems().stream()
+        order.setOrderLineItems(request.getOrderLineItems().stream()
                 .map(orderItemDto -> mapper.map(orderItemDto, OrderLineItems.class)).toList());
         repository.save(order);
 
     }
-
 }

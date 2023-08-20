@@ -1,0 +1,17 @@
+[
+  {
+    "id": null,
+    "skuCode": "iphone_13",
+    "quantity": 100
+  },
+  {
+    "id": null,
+    "skuCode": "hp_notebook",
+    "quantity": 20
+  },
+  {
+    "id": null,
+    "skuCode": "chromebook",
+    "quantity": 40
+  }
+]
