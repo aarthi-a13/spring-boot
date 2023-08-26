@@ -36,7 +36,9 @@ public class OrderService {
         InventoryResponse[] inventoryResponses = webClientBuilder.build().get()
                 .uri("http://inventory-service/Inventory/api/inventory",
                         uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
-                .retrieve().bodyToMono(InventoryResponse[].class).block();
+                .retrieve()
+                .bodyToMono(InventoryResponse[].class)//will define the response type
+                .block(); //makes the call as a synchronous
         boolean productsInStock = Arrays.stream(inventoryResponses).allMatch(InventoryResponse::isInStock);
         if (productsInStock)
             repository.save(order);
