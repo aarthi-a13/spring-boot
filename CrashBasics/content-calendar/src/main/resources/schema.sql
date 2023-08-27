@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS Content (
     url VARCHAR(255)
 );
 
-INSERT INTO Content(title,description,status,content_type,date_created)
-VALUES ('My spring boot practice','My spring boot app-content','IDEA','ARTICLE',CURRENT_TIMESTAMP);
+-- INSERT INTO Content(title,description,status,content_type,date_created)
+-- VALUES ('My spring boot practice','My spring boot app-content','IDEA','ARTICLE',CURRENT_TIMESTAMP);
