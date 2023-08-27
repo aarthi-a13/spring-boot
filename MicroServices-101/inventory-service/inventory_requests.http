@@ -1,1 +1,4 @@
+GET http://192.168.1.2:8082/Inventory/api/inventory?skuCode=apple_glass
+
+###
 GET http://localhost:8082/Inventory/api/inventory?skuCode=chromebook&skuCode=apple_glass
