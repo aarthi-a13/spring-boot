@@ -13,5 +13,10 @@
     "id": null,
     "skuCode": "chromebook",
     "quantity": 40
+  },
+  {
+    "id": null,
+    "skuCode": "apple_glass",
+    "quantity": 5
   }
 ]
