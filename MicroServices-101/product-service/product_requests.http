@@ -7,3 +7,6 @@ Content-Type: application/json
   "description": "Iphone 13",
   "price": 1200
 }
+
+###
+GET http://localhost:8083/Product/api/product

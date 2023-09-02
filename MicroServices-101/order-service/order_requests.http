@@ -17,14 +17,14 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8081/Order/api/order
+POST http://localhost:8083/Order/api/order
 Content-Type: application/json
 
 {
   "orderLineItems": [
     {
-      "skuCode": "hp_notebook",
-      "price": 800,
+      "skuCode": "apple_glass",
+      "price": 2500,
       "quantity": 1
     }
   ]
