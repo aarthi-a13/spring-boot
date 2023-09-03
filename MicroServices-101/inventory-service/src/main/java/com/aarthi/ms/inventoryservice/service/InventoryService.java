@@ -19,10 +19,11 @@ public class InventoryService {
 
     @SneakyThrows //Consumes exceptions without throwing. Should not be used in prod
     public List<InventoryResponse> isInStock(List<String> skuCode) {
-        //Simulation to test timeout scenario in order service using resilience4j
+        log.info("Checking Inventory");
+        /*Simulation to test timeout scenario in order service using resilience4j
         log.info("Wait started");
         Thread.sleep(10000);
-        log.info("Wait ended");
+        log.info("Wait ended");*/
 
         return repository.findBySkuCodeIn(skuCode).stream()
                 .map(inventory -> InventoryResponse.builder()
