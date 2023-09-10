@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ## mysql config
+  db:
+    image: mysql:latest
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_USERNAME: sb-java-user
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - /init.sql:/docker-entrypoint-initdb.d/init.sql
