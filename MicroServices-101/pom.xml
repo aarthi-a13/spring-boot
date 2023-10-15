@@ -80,8 +80,8 @@
                     </from>
                     <to><image>registry.hub.docker.com/aarthia13/${project.artifactId}:latest</image>
                         <auth>
-                            <username>aarthia13</username>
-                            <password>dckr_pat_Mdj4gVBwT9sY7EueCono2BnQ3AQ</password>
+                            <username>user</username>
+                            <password>password</password>
                         </auth>
                     </to>
                 </configuration>
